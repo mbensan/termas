@@ -1,0 +1,22 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrastyle %}
+<style>
+  #header {
+    padding: 0;
+    height: 6rem;
+    background-image: url(https://brainsoftstudio.com/wp-content/uploads/aguas-calientes-3.jpg);
+    background-position: center;
+    background-size: cover;
+    color: yellow;
+  }
+</style>
+{% endblock %}
+
+{% block branding %}
+<h3 id="site-name"><a href="{% url 'admin:index' %}">Directorio de Termas</a></h3>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
